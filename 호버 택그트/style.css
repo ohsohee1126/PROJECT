@@ -1,0 +1,55 @@
+* {margin: 0; padding: 0;}
+
+.item-wrapper {
+    width: 700px;
+    margin: 0 auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+figure {
+    display: inline-block;
+    width: calc(50% - 20px);
+    margin: 0 20px 20px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+figure:nth-child(2n + 0) {margin-right: 0;}
+figure img {
+    display:  block;
+    width: 100%;
+    transform: scale(1);
+    transition: all .3s linear;
+}
+figcaption{
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    opacity: 0;
+}
+figcaption::before {
+    content: "";
+    position: absolute; z-index: 3;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 5px;
+}
+figcaption p,
+figcaption h2 {
+    position: relative; z-index: 4;
+    transform: translateY(120px);
+    transition: all .3s ease;
+}
+figcaption p {font-size: 14px; color: #999;}
+figcaption h2 {font-size: 22px; color: #ddd; margin: 6px 0;}
+
+figure:hover figcaption {opacity: 1;}
+figure:hover figcaption p,
+figure:hover figcaption h2 {transform: translateY(0);}
+figure:hover img {transform: scale(1.1);}

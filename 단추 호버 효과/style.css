@@ -1,0 +1,93 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #333;
+}
+
+.btn-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-align: center;
+}
+h1 {
+    color: #fff;
+     text-transform: uppercase;
+}
+
+.btn {
+    display:  block;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 15px;
+    padding: 10px 5px;
+    background:  none;
+    color: #fff;
+    border-radius: 5px;
+    position: relative;
+    transition: all .5s ease-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btn::after {
+    color: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 0;
+    height:100%;
+    background: #e67e22;
+    z-index:-2;
+    transition: all .5s ease-out;
+}
+
+.btn:hover {
+    background: #e67e22;
+}
+
+.btn2:hover::after,
+.btn3:hover::after, 
+.btn4s:hover::after{
+    width: 100%;
+}
+
+.btn3::after {
+    left: auto;
+    right: 0;
+}
+
+.btn4::after {
+    left:  50%;
+    transform: translate(-50%);
+}
+
+.btn5::after,
+.btn6::after {
+    top:auto;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+}
+.btn5s:hover::after
+.btn6s:hover::after{
+    height: 100%;
+}
+.btn6::after{
+    bottom: auto;
+    top: 0;
+}
+
+.btn6::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 0;
+    height: 700%;
+}
+.btn:hover::after {
+    width: 100%;
+}

@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, p{
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#main {
+    background: url("https://pixabay.com/get/ga72dc6ee454389e5011245e842a4cb904e5b9072c0b70aa64b55ec3b387cef768233e75d01607e1047bedbe7571bc80d22affe8b9792212b2e98d1e93d84dcfce0866eede084b45eefe37c992b9c636c_1920.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;    
+    width: 200vh;/*해당 속성*/
+    height: 100vh;/*해당 속성*/
+    font-family: 'Questrial', sans-serif;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    color: white;
+    text-align: center;/*가로방향으로 가운데*/
+
+}
+
+#content h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    margin-bottom: 16px;
+}
+
+#content p {
+    font-size: 23px;
+    margin-bottom: 16px;
+}
+
+#content a{/*버튼에 박스*/
+    display: inline-block;/*여기부터*/
+    border: 2px solid white;
+    padding: 10px 20px;/*여기까지*/ /*직사각형을로 됀는거*/
+    border-radius: 20px;/*버튼박스에 둥글게 하는거*/
+    font-size: 17px;
+    font-weight: bold;
+}
+
+@media(max-width:759px){
+
+    #content h1 {
+        font-size: 50px;
+    }
+    
+    #content p {
+        font-size: 20px;
+    }
+    #content a {
+        font-size: 14px;
+    } 
+}

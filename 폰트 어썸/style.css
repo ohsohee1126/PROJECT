@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;/*맨위에서 가운데로 가는거*/
+    align-items: center;/*수직방향 가운데*/
+    background-color: rebeccapurple;/*스타일 카드 색상*/
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: yellow;/*스타일 박스 색샹*/
+    position: relative;
+    cursor: pointer;/*마우스를 카드로가슬때 손가락모양으로 나오게하는거*/
+    transition: all 0.5s;
+}
+
+.card:hover {/*해당활성하*/
+    box-shadow:inset 0 0 0 100px rgba(255, 190, 0, 0.7);/*첫번째는 박스박으로 나오게돼고*//*박스새도우에 0 0 0 x축y축불록값100px 은 카드에 절반이라고 생각하면됀다.*/
+    /*두번째는 inset인셋을너으면 박스안으로 들어가저서 마우스를 돼면  생상이 밖괜다.*/
+}
+
+.card i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left:  -54px;
+    margin-top: -48px;
+    color: rgb(40, 31, 118);
+    transition: all 0.5s;
+}
+
+.card i:nth-of-type(1) {
+    transform: scale(0);
+}
+
+.card:hover i:nth-of-type(1){
+    transform: scale(1);
+}
+
+.card:hover i:nth-of-type(2){
+    transform: scale(0);
+}

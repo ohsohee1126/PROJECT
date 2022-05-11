@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {/*계산기 밖에 배경*/
+    background-color: #1f1f1f;
+    display:flex ;/*여기부터 */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;/*여기까지 계산기를 가운데로 오는거을 코드한거시다.*/
+}
+.calculator {/*계산기 전체배경*/
+    width: 287px;
+    border: 1px solid #333;
+    background-color: #dff9fb;
+    padding: 5px;/*계산기 여백*/
+}
+
+.calculator form {
+    display: grid;
+    grid-template-columns: repeat(4, 65px);/*가로높이*/
+    grid-auto-rows: 65px;/*세로높이*/
+    grid-gap:5px;
+}
+
+.calculator form input {
+    border:2px solid #333;
+    cursor: pointer;/*손가락을 클릭하는것*/
+    font-size: 19px;/*글자키우기*/
+}
+
+.calculator form input:hover {
+    box-shadow: 1px 1px 2px #333;/*마우스 세도우 음향을 널울수있다*/
+}
+
+.calculator form .clear {
+    background-color:#f6e58d ;
+}
+
+.calculator form .operator {
+    background-color:#ffbe76;
+}
+
+.calculator form .dot {
+    background-color:#ff7979;
+}
+
+.calculator form input[type='text'] {/*X*/
+    grid-column: span 4;
+    text-align: right;
+    padding: 0 10px;
+}
+
+.calculator form .clear {/*O*/
+    grid-column: span 3;
+}
+
+.calculator form .result {
+    grid-column:span 2 ;
+}

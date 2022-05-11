@@ -1,0 +1,60 @@
+*{margin: 0; padding: 0;}
+body {background: #333;}
+
+h1 {
+    font-size: 30px;
+    color:#fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.img-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+figure {width: 400px; position: relative; overflow: hidden;}
+figure::before {
+    content: "";
+    background:  rgba(44, 62, 80, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    transition: all .7s ease-out;
+}
+figure img {
+    width: 100%;
+    transform: scale(1);
+    transition: all .7s ease-out;
+    display: block;
+}
+figure figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 30px;
+    text-align: left;
+}
+figure .title {
+    font-size: 26px;
+    color: #fff;
+    transform: translateY(20px);
+    transition: all .7s ease-out;
+}
+figure .memo {
+    font-size: 20px;
+    color: #fff;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all .7s ease-out;
+}
+
+figure:hover::before {opacity: 0;}
+figure:hover img {transform: scale(1.1);}
+figure:hover .title {transform: translateY(0);}
+figure:hover .memo {transform: translateY(0); opacity: 1;}
